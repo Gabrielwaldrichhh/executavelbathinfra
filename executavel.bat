@@ -24,7 +24,7 @@ echo  6. Teams
 echo  7. MicroSIP
 echo  8. AnyDesk
 echo  9. QualysAgent (Esse copia o arquivo do E: para nosso disco local, o comando de ativacao nao funciona, mas tem outro executavel que faz)
-echo  10. Remover o Administrador da maquina
+echo  10. Chrome
 echo  11. Setar uma senha para o usuario
 echo  12. OpenVPN 
 echo  13. Lightshot
@@ -108,13 +108,13 @@ goto menu
 
 :opcao9
 cls
-xcopy "E:\QualysCloudAgent.exe" "C:\" /y
+xcopy "D:\QualysCloudAgent.exe" "C:\" /y
 pause
 goto menu
 
 :opcao10
 cls
-net user Administrador /active:no
+start D:\ChromeSetup.exe
 pause
 goto menu
 
