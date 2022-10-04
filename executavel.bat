@@ -25,16 +25,14 @@ echo  7. MicroSIP
 echo  8. AnyDesk
 echo  9. QualysAgent (Esse copia o arquivo do E: para nosso disco local, o comando de ativacao nao funciona, mas tem outro executavel que faz)
 echo  10. Chrome
-echo  11. Setar uma senha para o usuario
-echo  12. OpenVPN 
-echo  13. Lightshot
-echo  14. TeamViwer
-echo  15. MySQL
-echo  16. Pasta Enable (Esta tando erro, tem que arrumar)
-echo  17.
+echo  11. OpenVPN 
+echo  12. Lightshot
+echo  13. TeamViwer
+echo  14. MySQL
+echo  15. Pasta Enable (Esta tando erro, tem que arrumar)
+echo  16. Setar uma senha para o usuario
 
-echo ------------------------------------------------------------------------------------------------------------------------------------------------
-               
+echo ------------------------------------------------------------------------------------------------------------------------------------------------        
 set /p opcao= Escolha uma opcao a ser executada: 
 echo ------------------------------------------------------------------------------------------------------------------------------------------------
 if %opcao% equ 1 goto opcao1
@@ -55,8 +53,7 @@ if %opcao% equ 15 goto opcao15
 if %opcao% equ 16 goto opcao16
 if %opcao% equ 17 goto opcao17
 if %opcao% equ 18 goto opcao18
-
-if %opcao% GEQ  goto opcao
+if %opcao% GEQ  goto menu
 
 :opcao1
 cls
@@ -119,35 +116,30 @@ pause
 goto menu
 
 :opcao11
-net user "Fapp" *
-pause
-gotomenu
-
-:opcao12
 cls
 start D:\OpenVPN-2.5.4-I604-amd64.msi
 pause
 goto menu
 
-:opcao13
+:opcao12
 cls
 start D:\setup-lightshot.exe
 pause
 goto menu
 
-:opcao14
+:opcao13
 cls
 start D:\TeamViewer_Setup_x64.exe
 pause
 goto menu
 
-:opcao15
+:opcao14
 cls
 start D:\mysql-installer-community-8.0.30.0.msi
 pause
 goto menu
 
-:opcao16
+:opcao15
 xcopy "D:\AGENTESN-ABLE" "C:\Users\%username%\Downloads\" /y
 pause
 goto menu
